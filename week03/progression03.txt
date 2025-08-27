@@ -1,0 +1,2 @@
+Higher-Order Functions
+- function accepts functions as parameters and return a function
