@@ -1,53 +1,46 @@
-// Convert Celsius to Fahrenheit Write a program that takes a temperature 
-// in Celsius from the user and converts it to Fahrenheit.
-function celsiusToFahrenheit(Celsius){
-    return (Celsius * 9/5 ) +32;
-}
-console.log(celsiusToFahrenheit(25));
+//Week 1: Arrays, Functions, Objects
+// Part 1: Arrays
 
-// Check Even or Odd
-// Write a program that takes an integer from the user and determines whether it is even or odd.
-function isEvenOrOdd(number){
-    if(number % 2 === 0){
-        return "Even"
-    }else{
-        return "Odd"
-    }
-}
-console.log(isEvenOrOdd(10))
+// Basic Access
+// สร้าง array ของชื่อเพื่อนอย่างน้อย 5 คน
+let friends = ['UV','Namwran','FOFO','BeamBeam','Kong']
+// เข้าถึง element ตัวแรก, ตัวกลาง, ตัวสุดท้าย และพิมพ์ออกมา
+console.log(friends[0]); //คนแรก
+console.log(friends[2]); //คนกลาง
+console.log(friends[4]); //คนสุดท้าย
+// เพิ่มชื่อใหม่ลงไปท้าย array แล้วลบชื่อแรกออก
+friends.push('NewFriend');
+friends.pop(2);
 
-// Sum of Numbers from 1 to N
-function sumOfNumber(N){
-    let sum = 0;
-    for(let i = 1; i<= N; i++){
-        sum += i;
-    }
-    return sum;
-}
-console.log(sumOfNumber(10))
+// Loop & Calculation
 
-//Write a program that takes a string from the user and counts the number of vowels (a, e, i, o, u) in it.
-function countVowels(str){
-    const vowels = 'aeiouAEIOU';
-    let count = 0;
-    for(let i = 0; i < str.length; i++){
-        if(vowels.includes(str[i])){
-            count ++;
-        }
+// ให้ array ของตัวเลข [10, 20, 30, 40, 50]
+let numbers =[10,20,30,40,50]
+// เขียน loop เพื่อหาผลรวม
+let sum = 0;
+for(let i = 0; i < numbers.length; i++){
+    sum += numbers[i];
+}
+console.log(sum);
+// หาค่าเฉลี่ยของ array นี้
+let average = sum / numbers.length;
+console.log(average);
 
-    }
-    return count;
-}
-// Write a program that takes a string from the user and prints it in reverse order.
-function reverseString(str){
-    let reversed = '';
-    for(let i = str.length - 1; i >= 0; i--){
-        reversed += str[i];
-    }
-    return reversed;
-}
+// Array Manipulation
+// เขียนโปรแกรมรับ array ของตัวเลข แล้วคืน array ใหม่ที่ ทุกตัวถูกคูณ 2
+let doubleNumbers = numbers.map(function(num){
+    return num * 2 ;
+})
 
-//built-in methods
-function reverseStringBuiltin(str){
-    return str.split('').reverse().join('');
-}
+console.log(doubleNumbers)
+
+//forEach
+doubleNumbers.forEach(function(num){
+    console.log(num);
+})
+
+let names = ['UV','Namwran','FOFO','BeamBeam','Kong']
+
+names.forEach(function(value, index){
+    console.log(`names[${index}]: ${value}`);
+});
