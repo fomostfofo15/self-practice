@@ -1,1 +1,7 @@
 Week 4: Functional Programming (Advanced Thinking)
+ได้ฝึกฝนการเขียน function ในรูปแบบ Higher-Order Functions
+สิ่งที่ได้จากการฝึกฝนคือ การเขียน function ที่รับ paramiter เป็น function และคืนค่าออกมาเป็น function
+//function customReducre(arr, fn, initialValue)
+จากโจทย์คือ การหาผลรวมของ ค่าใน arr โดยมีการกำหนด ค่าเริ่มต้นคือ
+let accumulator = initialValue; -> ในกรณีที่ไม่กำหนดค่าในตำแหน่งแรกของ arr จะเป็นค่าตั้งต้น
+accumulator = fn(accumulator, arr[i],i,arr); -> การส่งค่ากลับ callback function 

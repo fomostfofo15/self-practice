@@ -168,12 +168,3 @@ console.log(mergeAndDestructure({name: "Bob", age: 25}, {city: "Los Angeles", co
 // each word. The function should be case insensitive, but the output should maintain the original 
 // casing. If the input is null, undefined, or an empty string, return an empty string.
 
-function removeDuplicateWords(sentence){
-    if(!sentence) return "";
-    const words = sentence.split(" ");
-    const seen = new Set();
-    const result = [];
-    for(let word of words){ 
-    }
-
-}

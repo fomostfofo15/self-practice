@@ -1,2 +1,10 @@
-Week 3: Array Methods (Intermediate)
-
+Week 3: Array Methods (Intermediate)ฃ
+ได้เรียนรู้การใช้ arr Methods ในการเขียน function ตามคำสั่งที่ได้มีการกำหนดให้
+// Part A: map, filter, reduce
+map => ในการเข้าถึง element ทุกตัวใน arr แล้วสร้างเป็น arr ใหม่ขึ้นมา
+filter => กรอง arr ตามเงื่อนไข ทำให้ได้ arr ใหม่ที่สั้นลง
+reduce => รวม arr ให้กลายเป็นค่าเดียว
+// Part B: find, some, every
+find => เอา element ตัวแรก ที่ตรงเงื่อนไขออกมา (ถ้าเจอ -> คืนค่านั้น , ถ้าไม่เจอ -> undefined)
+some => check ว่ามีอย่างน้อยหนึ่งตัว ตรงเงื่อนไขไหม (ถ้ามี -> คืน true , ถ้าไม่มี -> false)
+every => check ว่าทุกตัวตรงเงื่อนไขไหม (ถ้าทุกตัวผ่าน -> คืน true , ถ้ามีตัวเดียวที่ไม่ผ่าน -> false)

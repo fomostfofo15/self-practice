@@ -1,5 +1,4 @@
 // Week 4: Functional Programming (Advanced Thinking)
-
 // Part A: Higher-Order Functions
 // ฟังก์ชันรับฟังก์ชัน
 function applyOperation(arr, operation){
@@ -20,3 +19,25 @@ function makeAdder(x){
     }
 }
 console.log(makeAdder(2)(3));
+// Part B : Higher-Order Functions with Array methods (map, filter, reduce)
+// เขียนฟังก์ชัน customFilter(arr, fn) ที่ทำงานเหมือน .filter()
+// customFilter([1,2,3,4], x => x%2 === 0) // [2,4]
+function customFilter(arr, fn){
+    const result = [];
+    for(let i=0; i < arr.length; i++){
+        if(fn(arr[i],i,arr)){
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+
+//เขียนฟังก์ชัน customReduce(arr, fn, initialValue) ที่ทำงานเหมือน .reduce()
+function customReducre(arr, fn, initialValue){
+    let accumulator = initialValue;
+    for(let i=0; i < arr.length; i++){
+        accumulator = fn(accumulator, arr[i],i,arr);
+    }
+    return accumulator;
+}
+
